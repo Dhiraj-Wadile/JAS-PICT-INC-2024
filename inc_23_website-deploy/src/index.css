@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+    url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-bold";
+  src: local("Poppins-bold"),
+    url("./assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"), url("./assets/fonts/Gilroy-Light.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url("./assets/fonts/Montserrat-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Montserrat-bold";
+  src: local("Montserrat-bold"),
+    url("./assets/fonts/Montserrat-ExtraBold.ttf") format("ttf");
+}
+
+@layer base {
+  html {
+    font-family: "Poppins", system-ui, sans-serif;
+  }
+}
+
+.Toastify__progress-bar--success {
+  background: rgb(242 163 15 / 0.8) !important;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white !important;
+  background-color: black !important;
+}
+
+h1 {
+  font-family: "Montserrat-bold", sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+title {
+  font-family: "Poppins-bold", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input:checked ~ .label {
+  color: #f2a30f;
+  background-color: rgba(37, 99, 235, 0.2);
+  border-color: #f2a30f;
+}
+
+input:hover ~ .label {
+  background-color: rgba(37, 99, 235, 0.2);
+  border-color: #f2a30f;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0d7f96 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #010642;
+  /* background-color: transparent; */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #0d7f96;
+  border-radius: 10px;
+  border: 3px solid #010642;
+  /* border: transparent; */
+}
+
+/* ===== Loader CSS ===== */
+
+.spin_loader {
+  animation: spin_loader 1s linear infinite;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes spin_loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.active{
+  color : #ffd700;
+  border-bottom : 4px solid #ffd700;
+}

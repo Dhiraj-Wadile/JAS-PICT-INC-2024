@@ -1,0 +1,94 @@
+.cube-wrapper {
+  position: relative;
+}
+
+.cube {
+  position: relative;
+  top: 110px;
+  margin: 0 auto;
+  height: 200px;
+  width: 200px;
+
+  animation: spin 10s infinite linear;
+  transform-style: preserve-3d;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0) rotateX(20);
+  }
+  to {
+    transform: rotateY(-360deg) rotateX(360deg);
+  }
+}
+
+.cube > div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* opacity: 0.8; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12rem;
+  color: white;
+  /* -webkit-text-stroke-width: 3px; */
+}
+
+.cube > div:hover {
+  /* opacity: 1; */
+  transition:  0.3s linear;
+}
+
+.cube > div p {
+  -webkit-filter: drop-shadow(0px 0px 5px rgb(0 0 0 / 30%));
+  filter: drop-shadow(0px 0px 5px rgb(0 0 0 / 30%));
+}
+
+.back-C {
+  transform: rotateX(90deg) translateZ(100px);
+  -webkit-text-stroke-color: rgb(126 188 242 / 100%);
+  background-color: rgb(126 188 242 / 95%);
+  border: 2px solid rgb(126 188 242 / 100%);
+  box-shadow: 0 0 32px 6px rgb(126 188 242 / 100%) inset;
+}
+
+.top-I {
+  transform: translateZ(100px);
+  -webkit-text-stroke-color: rgb(242 163 15 / 100%);
+  background-color: rgb(242 163 15 / 95%);
+  border: 2px solid rgb(242 163 15 / 100%);
+  box-shadow: 0 0 32px 6px rgb(242 163 15 / 100%) inset;
+}
+
+.left-N {
+  transform: rotateY(90deg) translateZ(100px);
+  -webkit-text-stroke-color: rgb(162 205 242 / 100%);
+  background-color: rgb(162 205 242 / 95%);
+  border: 2px solid rgb(162 205 242 / 100%);
+  box-shadow: 0 0 32px 6px rgb(162 205 242 / 100%) inset;
+}
+
+.bottom-I {
+  transform: rotateY(180deg) translateZ(100px);
+  -webkit-text-stroke-color: rgb(242 163 15 / 100%);
+  background-color: rgb(242 163 15 / 95%);
+  border: 2px solid rgb(242 163 15 / 100%);
+  box-shadow: 0 0 32px 6px rgb(242 163 15 / 100%) inset;
+}
+
+.right-N {
+  transform: rotateY(-90deg) translateZ(100px);
+  -webkit-text-stroke-color: rgb(162 205 242 / 100%);
+  background-color: rgb(162 205 242 / 95%);
+  border: 2px solid rgb(162 205 242 / 100%);
+  box-shadow: 0 0 32px 6px rgb(162 205 242 / 100%) inset;
+}
+
+.front-C {
+  transform: rotateX(-90deg) translateZ(100px);
+  -webkit-text-stroke-color: rgb(126 188 242 / 100%);
+  background-color: rgb(126 188 242 / 95%);
+  border: 2px solid rgb(126 188 242 / 100%);
+  box-shadow: 0 0 32px 6px rgb(126 188 242 / 100%) inset;
+}
